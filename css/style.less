@@ -1,0 +1,320 @@
+/* file name: style.less 
+   date: 11/15/17
+   programmer: Frank Burley
+   source code notes at the bottom
+*/
+
+/* color palette "produce" from Adobe Color*/
+
+@color1: #6A8F22;
+@color2: #D6C248;
+@color3: #F3760F;
+@color4: #DA2420;
+@color5: #F3F3F2;
+@lightColor: #FFFFFF;
+@darkColor: #000000;
+
+/*end of color palette*/
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+}
+nav {
+    z-index: 3;
+    align-content: position: fixed;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: @color1;
+    overflow: auto;
+    a {
+        width: 25%;
+        padding: 12px 0;
+        float: left;
+        color: @lightColor;
+        font-size: 30px;
+    }
+}
+header {
+    background-image: url(../images/hero_image.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 240px;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    padding: 65px 17px;
+    h1 {
+        text-align: center;
+        font-size: 2.4em;
+        font-family: 'Chewy', cursive;
+        color: @lightColor;
+        padding: 120px 10px;
+    }
+}
+main {
+    section {
+        h2 {
+            text-align: center;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: @color3;
+            font-size: 1.5em;
+            color: #FFFFFF;
+            padding: 15px;
+        }
+        p {
+            font-family: 'Roboto', Arial, sans-serif;
+            text-align: center;
+            padding: .6em;
+            line-height: 1.3em;
+            font-size: 1.2em;
+        }
+        h3 {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 1.2em;
+            font-weight: 500;
+            text-align: center;
+            padding-top: 20px;
+            margin-bottom: 1em;
+        }
+        h4 {
+            font-family: 'Archivo Narrow', Arial, sans-serif;
+            font-size: 1.1em;
+            text-align: center;
+            color: @color3;
+            padding-bottom: 1em;
+        }
+        ul {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 1.1em;
+            
+            list-style-position: inside;
+            list-style-type: disc;
+            line-height: 30px;
+            padding-bottom: 20px;
+            padding-left: 1.25em;
+              li span {
+                  position: relative;
+                  left: -.6em;
+              }
+        }
+       
+        .buttons a,
+        .buttons button {
+            display: inline-block;
+            margin: auto;
+            background-color: @color1;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.2em;
+            border: 1px solid@darkColor;
+            text-transform: uppercase;
+            line-height: 130%;
+            text-decoration: none;
+            font-weight: bold;
+            color: @lightColor;
+            cursor: pointer;
+            padding: 15px 24px;
+            margin: 24px 5px 0 5px;
+        }
+        .buttons {
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+        }
+        .choice {
+            font-size: 2.5em;
+            font-family: 'Archivo Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+        .burrito {
+            border: 4px solid @color2;
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            margin: 10px;
+        }
+        .bowl {
+            border: 4px solid @color2;
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            float: right;
+            margin: 10px;
+        }
+        .hours {
+            text-align: center;
+            color: @color4;
+            font-size: 1.3em;
+            padding-left: 10px;
+            padding-right: 10px;
+            
+        }
+        .address {
+            color: @darkColor;
+            font-size: 1em;
+            display: block;
+            text-align: center;
+        }
+        .map {
+            margin-top: 34px;
+            max-width: 100%;
+        }
+     }
+}
+footer {
+    padding: 2em;
+    background-color: @color4;
+    height: 145px;
+    margin-top: 3em;
+    ul {
+        text-align: center;
+        li {
+            list-style-type: none;
+            float: none;
+            display: inline-block;
+            i {
+                background: @lightColor;
+                color: @color4;
+                width: 47px;
+                height: 47px;
+                border-radius: 30px;
+                text-align: center;
+                margin-right: 10px;
+                padding-top: 15%;
+            }
+        }
+    }
+}
+// TABLET STYLESHEET
+@media screen and (min-width: 768px) {
+    nav {
+        display: none;
+    }
+    main {
+        section{
+            .burrito {
+                border: 4px solid @color2;
+                border-radius: 50%;
+                width: 108px;
+                height: 108px;
+                margin: 9px;
+        }
+            .bowl {
+                border: 4px solid @color2;
+                border-radius: 50%;
+                width: 108px;
+                height: 108px;
+                float: right;
+                margin: 9px;
+        }
+            .mapHours {
+                display: none;
+            }
+            .map {
+               display: block;
+                margin-left: auto;
+                margin-right: auto;
+                height: 300px;
+                width: 300px;
+            }
+            img {
+                height: 150px;
+            }
+            .textButton {
+                display: none;
+            }
+        }
+    }
+    
+}
+// DESKTOP STYLESHEET
+@media screen and (min-width: 1025px) {
+    /* Placeholder for desktop CSS code */
+     header {
+         padding: 0;
+         height: 350px;
+            h1 {
+                font-size: 5em;
+                text-align: left;
+                padding: 15px 0 105px 20px;
+                color: @color2;
+                width: 20%;
+            }
+        }
+    main {
+       
+         
+        section{
+            p {
+                line-height: 2em;
+            }
+            h3 {
+                padding-top: 57px;
+            }
+            .choice {
+                padding: 0;
+                font-size: 1.9em;
+            }
+            .burrito {
+                border: 4px solid @color2;
+                border-radius: 50%;
+                width: 118px;
+                height: 118px;
+                margin: 9px 0 0 60px;
+        }
+            .bowl {
+                border: 4px solid @color2;
+                border-radius: 50%;
+                width: 118px;
+                height: 118px;
+                float: right;
+                margin: 9px 50px 0 0px;
+        }
+        
+            
+            img {
+                height: 190px;
+                
+            }
+            .mapHours {
+                display: none;
+            }
+            .hours {
+            text-align: center;
+            color: @color4;
+            font-size: 1.3em;
+            padding-left: 0;
+            padding-right: 0;
+            width: 37%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+            .textButton {
+                display: none;
+            }
+        }
+    }
+}
+
+
+/*notes from the programmer about the source code as of date: 11.15.16. These are line specific so please update this as changes are made with dates.
+
+On the topic of grid.css for responsive grid layout, the idea was to start with larger mobile in landscape, then tablet to desktop. The break point for the responsive grid start at 736px on line 43 in grid.css, which is an iPhone 6 plus in landscape mode.
+
+The color palette for the project can be found at https://color.adobe.com/Produce-color-theme-7778588/ which is title "Produce".
+
+This may be confusing to the break point for the website itself at 768px. This was done to omit the sms button, the nav bar, map hours, and some padding, margins, etc.
+
+The navigation bar was only in the mobile view to reduce the amount of scrolling for the users. It is removed when the screen is larger due to limited amount of scrolling needed. It can easily be commented out in the CSS or removed completely. Just make sure to leave the "font awesome" link in the <head> of the html. This is also being used in the footer as well for the icons.
+
+In the index.html you will find the lists for ingredients. Starting at lines 50 to 108 the items are in between <li> tags and the <span> needs to be included for the bullet discs in the bulleted list to style correctly.
+
+The Google Map link is at line 116 https://www.google.com/maps/place/SW+Alder+St+%26+SW+3rd+Ave,+Portland,+OR+97204/@45.5189193,-122.6773577,17z/data=!3m1!4b1!4m5!3m4!1s0x54950a05e9f31c37:0x147e3ce29232d353!8m2!3d45.5189193!4d-122.675169 If the cart moves locations, this needs to be updated as well as the image map.
+
+The social media icons are not linked to any social media profiles. Please update these as they are created. 
+
+Currently, all images are in the image folder. The images will all need to be replaced by your own images with these sizes. The hero image will be replaced with an image at 828x390.  The burrito and bowl images in the round borders will be at 750x750. The images below rice and toppings will be replaced with images at 942x354. The Google map screenshot will be replaced with an image or screenshot at 700x700. Use jpg or png file types for photo images. 
+
+
+*/
